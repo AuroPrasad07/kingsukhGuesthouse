@@ -1,0 +1,29 @@
+.room_container {
+    margin: 0 9rem;
+    padding: 4rem 1rem 8rem;
+}
+.room {
+    padding-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .room_container {
+        margin: 0 0.5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .room_container {
+        margin: 0;
+    }
+    .room {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 578px) {
+    .room {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

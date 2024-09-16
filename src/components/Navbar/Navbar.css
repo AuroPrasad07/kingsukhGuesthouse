@@ -1,0 +1,132 @@
+.header {
+    background-image: url('../../../public/assets/ayodhya.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    margin: 0 8rem;
+    padding: 2.1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    max-width: 7rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav_links a {
+    position: relative;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+}
+.nav_links a:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+    transform-origin: left;
+}
+.nav_links a:hover:after {
+    width: 100%;
+}
+button {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+button:hover {
+    background-color: var(--primary-color-dark);
+}
+.header-text {
+    margin: 0 8rem;
+    padding: 160px 16px 240px;
+}
+.header-text p {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.5;
+}
+.header-text h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    color: var(--white);
+    text-align: center;
+}
+.header-text h1 span {
+    color: var(--primary-color);
+}
+.resp-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.resp-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+    nav {
+        margin: 0;
+    }
+    .header-text {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: var(--primary-color);
+        padding: 1rem;
+    }
+    .resp-icon {
+        display: block;
+    }
+    .nav_links {
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #bc1c5ce6;
+        position: absolute;
+        width: 100%;
+        top: -800px;
+        right: 0;
+        z-index: 10;
+    }
+    .nav_links.open {
+        top: 10.5%;
+        transition: 0.3s;
+    }
+    .resp-button {
+        display: none;
+    }
+    .header-text {
+        margin: 0;
+        padding: 100px 16px 240px;
+    }
+}

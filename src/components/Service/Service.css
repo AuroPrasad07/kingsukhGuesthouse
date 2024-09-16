@@ -1,0 +1,94 @@
+.service {
+    padding: 0 9rem;
+    background-image: url("../assets/palash.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service_container {
+    padding-block: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.service_content {
+    grid-column: 1/2;
+    padding: 2rem 4rem;
+    background-color: var(--white);
+}
+.service_list {
+    list-style: none;
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+.service_list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+.service_list span {
+    padding: 5px 12px;
+    font-size: 1.75rem;
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    border-radius: 100%;
+} 
+.service_list li:nth-child(1) span {
+    color: #60a5fa;
+    background-color: #dbeafe;
+}
+.service_list li:nth-child(2) span {
+    color: #f472b6;
+    background-color: #fce7f3;
+}
+.service_list li:nth-child(3) span {
+    color: #c084fc;
+    background-color: #f3e8ff;
+}
+.service_list li:nth-child(4) span {
+    color: #fb7185;
+    background-color: #ffe4e6;
+}
+.banner_container {
+    margin: 0 9rem;
+    padding: 5rem 1rem;
+}
+.banner_content {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}  
+.banner_card {
+    text-align: center;
+    flex: 1 1 180px;
+}  
+.banner_card h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}  
+.banner_card p {
+    color: var(--text-light);
+}
+
+@media screen and (max-width: 1200px) {
+    .service {
+        padding: 0 1rem;
+    }
+    .banner_container {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .service_container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
